@@ -1,0 +1,28 @@
+[project]
+name = "overphloem"
+version = "0.1.0"
+description = "Framework for writing Overleaf bots"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "" }]
+dependencies = ["GitPython>=3.1.30"]
+
+[project.urls]
+Repository = "https://github.com/your-username/overphloem"
+Issues = "https://github.com/your-username/overphloem/issues"
+
+[project.scripts]
+overphloem = "overphloem.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["overphloem"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.5",
+]
