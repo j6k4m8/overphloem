@@ -8,7 +8,7 @@
 pip install overphloem
 ```
 
-![![PyPI version](https://img.shields.io/pypi/v/overphloem.svg?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/overphloem/)
+[![PyPI version](https://img.shields.io/pypi/v/overphloem.svg?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/overphloem/)
 
 ## Features
 
