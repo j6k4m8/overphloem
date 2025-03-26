@@ -2,6 +2,14 @@
 
 > Framework for writing Overleaf bots
 
+## Installation
+
+```bash
+pip install overphloem
+```
+
+![![PyPI version](https://img.shields.io/pypi/v/overphloem.svg?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/overphloem/)
+
 ## Features
 
 -   Sync a local directory with an Overleaf project
@@ -62,23 +70,26 @@ def on_change(project: Project):
 overphloem provides several ways to monitor and respond to changes in Overleaf projects:
 
 1. **CLI Listen Command**: Use `listen` to monitor and display changes in real-time
-   ```bash
-   uv run overphloem listen --project-id $PROJECT_ID --verbose
-   ```
+
+    ```bash
+    uv run overphloem listen --project-id $PROJECT_ID --verbose
+    ```
 
 2. **Attach Shell Scripts**: Run custom shell scripts when changes are detected
-   ```bash
-   uv run overphloem attach --project-id $PROJECT_ID --script ./examples/change_detector.sh
-   ```
+
+    ```bash
+    uv run overphloem attach --project-id $PROJECT_ID --script ./examples/change_detector.sh
+    ```
 
 3. **Python Event API**: Create custom event handlers using the `@on` decorator
-   ```python
-   from overphloem import on, Event
-   
-   @on(Event.CHANGE, 'your-project-id')
-   def on_change(project):
-       print(f"Changes detected in {project.project_id}")
-   ```
+
+    ```python
+    from overphloem import on, Event
+
+    @on(Event.CHANGE, 'your-project-id')
+    def on_change(project):
+        print(f"Changes detected in {project.project_id}")
+    ```
 
 See [the examples directory](./examples/) for sample scripts demonstrating these approaches.
 
